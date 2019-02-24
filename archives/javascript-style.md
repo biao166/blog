@@ -33,20 +33,20 @@ Airbnb 版更详尽，标准版更易操作，暂定使用标准风格，扩展�
 
 首先安装全局 ESLint
 
-```
-$ npm i -g eslint
+``` bash
+npm i -g eslint
 ```
 
 在项目文件夹安装工具
 
-```
-$ npm install eslint eslint-friendly-formatter eslint-loader eslint-plugin-html eslint-plugin-promise eslint-plugin-standard --save-dev
+``` bash
+npm install eslint eslint-friendly-formatter eslint-loader eslint-plugin-html eslint-plugin-promise eslint-plugin-standard --save-dev
 ```
 
 然后安装标准语法规则
 
-```
-$ npm install eslint-config-standard --save-dev
+``` bash
+npm install eslint-config-standard --save-dev
 ```
 
 增加配置文件 <code>.eslintrc</code>
@@ -124,7 +124,7 @@ cli执行 <code>npm run lint</code>
 
 webpack 配置文件增加 rule
 
-```
+```js
 rules: [{
     test: /\.(js|vue)$/,
     loader: 'eslint-loader',

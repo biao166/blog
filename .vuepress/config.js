@@ -1,4 +1,6 @@
 const archives = [
+  'git-config',
+  'work-environment-initialization',
   'javascript-style',
   'editorconfig-guideline',
   'node-pre-gyp-binary',
@@ -11,10 +13,19 @@ module.exports = {
   title: 'Li Biao',
   description: 'Just playing around',
 
-  serviceWorker: true,
+  markdown: {
+    lineNumbers: true
+  },
+
   themeConfig: {
     repo: 'biao166',
     repoLabel: 'GITHUB',
+
+    lastUpdated: 'Last Updated',
+
+    serviceWorker: true,
+
+    sidebarDepth: 2,
 
     nav: [
       { text: 'Home', link: '/' },
@@ -23,6 +34,6 @@ module.exports = {
 
     sidebar: {
       '/archives/': archives
-    }
+    },
   }
 }

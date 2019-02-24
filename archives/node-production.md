@@ -8,7 +8,7 @@
 
 在 bin/www（app.js）加入
 
-```
+``` js
 if (process.env.NODE_USER) {
   console.log("run as " + process.env.NODE_USER)
   process.setuid(process.env.NODE_USER)
@@ -17,13 +17,13 @@ if (process.env.NODE_USER) {
 
 直接运行
 
-```
+``` bash
 NODE_USER=www node ./bin/www
 ```
 
 pm2 运行
 
-```
+``` bash
 NODE_USER=www pm2 start pm2.json
 ```
 
@@ -31,7 +31,7 @@ NODE_USER=www pm2 start pm2.json
 
 将NODE_USER 加入到 pm2.json 的 env配置中
 
-```
+``` js
 {
   // ...
   "env": {
@@ -52,13 +52,13 @@ pm2默认运行目录是当前用户的 $HOME/.pm2， 这样每个用户都会�
 
 编辑文件 /etc/profile ，加入
 
-```
+``` bash
 export PM2_HOME="/var/run/pm2"
 ```
 
 执行
 
-```
+``` bash
 pm2 kill
 source /etc/profile
 chmod -R 777 /var/run/pm2
